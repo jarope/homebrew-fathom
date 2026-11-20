@@ -5,7 +5,9 @@ macOS with the best of KDE Dolphin: tabs, split view, a folder shelf,
 Spotlight search, Git badges and your own right-click actions.
 
 ```sh
-brew install --cask jarope/fathom/fathom
+brew tap jarope/fathom
+brew trust jarope/fathom      # Homebrew 7+ asks you to trust third-party taps once
+brew install --cask fathom
 ```
 
 Fathom keeps itself up to date (Preferences → Updates); `brew upgrade` works

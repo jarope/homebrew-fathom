@@ -16,14 +16,17 @@ cask "fathom" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on :macos
 
   app "Fathom.app"
 
   # Fathom isn't notarised (no Apple Developer account, by choice), so let macOS open it
   # without the "can't check it for malicious software" block.
-  postflight do
-    system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{appdir}/Fathom.app"]
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args:           ["-dr", "com.apple.quarantine", "{{appdir}}/Fathom.app"],
+        writable_paths: ["Fathom.app"],
+        writable_base:  :appdir
   end
 
   zap trash: [
