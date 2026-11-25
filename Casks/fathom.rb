@@ -3,7 +3,7 @@
 # release.sh --publish updates version + sha256 here and in the tap.
 cask "fathom" do
   version "0.33.0"
-  sha256 "977bad7f9191f966c037dc7774f12d6a45397a6e05d57fa5d867482bf8aa1ecb"
+  sha256 "eb2c068ce7db90a8b73ff28af9eb8f47ed07ba778a5046c83d8f51aa96b723cd"
 
   url "https://github.com/jarope/fathom/releases/download/v#{version}/Fathom_#{version}_universal.dmg"
   name "Fathom"
