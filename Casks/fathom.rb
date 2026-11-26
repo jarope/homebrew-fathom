@@ -2,8 +2,8 @@
 # as Casks/fathom.rb, so people can:   brew install jarope/fathom/fathom
 # release.sh --publish updates version + sha256 here and in the tap.
 cask "fathom" do
-  version "0.36.0"
-  sha256 "800f006b1a2a33f5d9c6664706ccd35d71cb1412c20bf9beac8ef828bada9742"
+  version "0.37.0"
+  sha256 "22b87eaf2a640426c644273fd854dc18cd86d85d16504e1741002b0d12b9b041"
 
   url "https://github.com/jarope/fathom/releases/download/v#{version}/Fathom_#{version}_universal.dmg"
   name "Fathom"
